@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Navbar from './component/Navbar';
+import NewsContainer from './component/NewsContainer';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <BrowserRouter>
+    <Navbar/>
+    
+    <Routes>
+      <Route path='/' element={<NewsContainer  category="all"/>}> </Route>
+      <Route path='/science' element={<NewsContainer  category="science"/>}> </Route>
+      <Route path='/technology' element={<NewsContainer  category="technology"/>}> </Route>
+      <Route path='/sports' element={<NewsContainer  category="sport"/>}> </Route>
+      <Route path='/entertainment' element={<NewsContainer  category="entertainment"/>}> </Route>
+      <Route path='/politics' element={<NewsContainer  category="politics"/>}> </Route>
+      <Route path='/education' element={<NewsContainer  category="education"/>}> </Route>
+      <Route path='/crime' element={<NewsContainer  category="crime"/>}> </Route>
+      <Route path='/jokes' element={<NewsContainer  category="jokes"/>}> </Route>
+    
+    </Routes>
+    </BrowserRouter>
+    </>
   );
 }
 
