@@ -10,7 +10,7 @@ const NewsItem = ({title,image,description,url}) => {
         <img src={image?image:pic} className="card-img-top mt-1 " height='200px' alt="..."/>
           <div className="card-body">
             <h5 className="card-title mt-2 " style={{height:"75px"}}>{title.slice(0,50)+"..."}</h5>
-            <p className="card-text " style={{height:"110px" ,textAlign:"justify"}}>{description.toString().slice(0,150)+"..."}</p>
+            <p className="card-text " style={{height:"110px" ,textAlign:"justify"}}>{description!=null ? description.slice(0,150):"..." +"..."}</p>
             <a href={url} className="btn w-100 text-light backgd readMore mb-1">Read Full Article ...</a>
           </div>
       </div>
