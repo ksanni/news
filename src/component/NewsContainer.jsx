@@ -22,7 +22,7 @@ const NewsContainer = ({category,language}) => {
 
   const lastPostIndex=currentPage * postsPerPage;
   const firstPostIndex= lastPostIndex -postsPerPage;
-  const currentPosts= data.toString().slice(firstPostIndex, lastPostIndex);
+  const currentPosts= data.slice(firstPostIndex, lastPostIndex);
   return (
     <>
     <Carousal data={data} />
