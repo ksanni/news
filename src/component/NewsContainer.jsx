@@ -17,7 +17,7 @@ const NewsContainer = ({category,language}) => {
     
   }
   useEffect(() => {
-    getNews()
+    getNews();
   },[category]);
 
   const lastPostIndex=currentPage * postsPerPage;
@@ -33,7 +33,7 @@ const NewsContainer = ({category,language}) => {
             currentPosts.map((item, index) => {
               return (
                 <>
-                {console.log(item.title)}
+                
                   <NewsItem
                     key={index}
                     title={item.title}
