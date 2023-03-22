@@ -1,7 +1,10 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import '../App.css'
 const Navbar = () => {
+
+     
+
     return (
         <>
             <nav className="navbar navbar-expand-lg p-3 backgd">
@@ -13,7 +16,7 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link to='/' className="nav-link text-light active" aria-current="page">Home</Link>
+                                <Link to='/' className="nav-link text-light active" aria-current="page">Top</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to='/science' className="nav-link text-light">Science</Link>
@@ -31,14 +34,14 @@ const Navbar = () => {
                                 <Link to='/politics' className="nav-link text-light">Politics</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to='/education' className="nav-link text-light">Education</Link>
+                                <Link to='/health' className="nav-link text-light">Health</Link>
+                            </li>
+                            {/* <li className="nav-item">
+                                <Link to='/food' className="nav-link text-light">Food</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to='/crime' className="nav-link text-light">Crime</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to='/jokes' className="nav-link text-light">Jokes</Link>
-                            </li>
+                                <Link to='/environment' className="nav-link text-light">Environment</Link>
+                            </li> */}
                             <li className="nav-item dropdown">
                                 <Link className="nav-link text-light dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Hindi-News
@@ -49,18 +52,15 @@ const Navbar = () => {
                                     <li><Link className="dropdown-item" to="hi-sports">खेल</Link></li>
                                     <li><Link className="dropdown-item" to="hi-entertainment">मनोरंजन</Link></li>
                                     <li><Link className="dropdown-item" to="hi-politics">राजनीति</Link></li>
-                                    <li><Link className="dropdown-item" to="hi-education">शिक्षा</Link></li>
-                                    <li><Link className="dropdown-item" to="hi-crime">अपराध</Link></li>
-                                    <li><Link className="dropdown-item" to="hi-jokes">चुटकुला</Link></li>
-                                    
+                                    <li><Link className="dropdown-item" to="hi-health">स्वास्थ</Link></li>
+                                    {/* <li><Link className="dropdown-item" to="hi-food">खाद्य पदार्थ</Link></li>
+                                    <li><Link className="dropdown-item" to="hi-environment">पर्यावरण</Link></li>
+                                     */}
                                 </ul>
                             </li>
 
                         </ul>
-                        <form className="d-flex" role="search">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-outline-success text-light bg-primary" type="submit">Search</button>
-                        </form>
+                        
                     </div>
                 </div>
             </nav>

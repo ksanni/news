@@ -134,3 +134,9 @@ body{
 font-size: large;
 font-weight: 700;
 }
+.search{
+  justify-content: space-evenly;
+}
+.d-flex{
+  height: fit-content;
+}

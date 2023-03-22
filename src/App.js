@@ -1,35 +1,37 @@
 import React from 'react';
 import './App.css';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
-import Navbar from './component/Navbar';
+// import Navbar from './component/Navbar';
 import NewsContainer from './component/NewsContainer';
+import Navbar from './component/Navbar';
 
 
 function App() {
+  
   return (
     <>
-    <BrowserRouter>
-    <Navbar/>
+    <BrowserRouter> 
     
+      <Navbar/>
     <Routes>
-      <Route path='/' element={<NewsContainer  category="all"/>}> </Route>
-      <Route path='/science' element={<NewsContainer  category="science"/>}> </Route>
-      <Route path='/technology' element={<NewsContainer  category="technology"/>}> </Route>
-      <Route path='/sports' element={<NewsContainer  category="sport"/>}> </Route>
-      <Route path='/entertainment' element={<NewsContainer  category="entertainment"/>}> </Route>
-      <Route path='/politics' element={<NewsContainer  category="politics"/>}> </Route>
-      <Route path='/education' element={<NewsContainer  category="education"/>}> </Route>
-      <Route path='/crime' element={<NewsContainer  category="crime"/>}> </Route>
-      <Route path='/jokes' element={<NewsContainer  category="jokes"/>}> </Route>
+      <Route path='/' element={<NewsContainer  category="nation" language="lang=en"/>}> </Route>
+      <Route path='/science' element={<NewsContainer  category="science" language="lang=en"/>}> </Route>
+      <Route path='/technology' element={<NewsContainer  category="technology" language="lang=en"/>}> </Route>
+      <Route path='/sports' element={<NewsContainer  category="sports" language="lang=en"/>}> </Route>
+      <Route path='/entertainment' element={<NewsContainer  category="entertainment" language="lang=en"/>}> </Route>
+      <Route path='/politics' element={<NewsContainer  category="politics" language="lang=en"/>}> </Route>
+      <Route path='/health' element={<NewsContainer  category="health" language="lang=en"/>}> </Route>
+      {/* <Route path='/food' element={<NewsContainer  category="food" language="lang=en"/>}> </Route>
+      <Route path='/environment' element={<NewsContainer  category="environment" language="lang=en"/>}> </Route> */}
 
-      <Route path='/hi-science' element={<NewsContainer  category="science" language="language=hi"/>}> </Route>
-      <Route path='/hi-technology' element={<NewsContainer  category="technology" language="language=hi"/>}> </Route>
-      <Route path='/hi-sports' element={<NewsContainer  category="sport" language="language=hi"/>}> </Route>
-      <Route path='/hi-entertainment' element={<NewsContainer  category="entertainment" language="language=hi"/>}> </Route>
-      <Route path='/hi-politics' element={<NewsContainer  category="politics" language="language=hi"/>}> </Route>
-      <Route path='/hi-education' element={<NewsContainer  category="education" language="language=hi"/>}> </Route>
-      <Route path='/hi-crime' element={<NewsContainer  category="crime" language="language=hi"/>}> </Route>
-      <Route path='/hi-jokes' element={<NewsContainer  category="jokes" language="language=hi"/>}> </Route>hi-
+      <Route path='/hi-science' element={<NewsContainer  category="science" language="lang=hi"/>}> </Route>
+      <Route path='/hi-technology' element={<NewsContainer  category="technology" language="lang=hi"/>}> </Route>
+      <Route path='/hi-sports' element={<NewsContainer  category="sports" language="lang=hi"/>}> </Route>
+      <Route path='/hi-entertainment' element={<NewsContainer  category="entertainment" language="lang=hi"/>}> </Route>
+      <Route path='/hi-politics' element={<NewsContainer  category="politics" language="lang=hi"/>}> </Route>
+      <Route path='/hi-health' element={<NewsContainer  category="health" language="lang=hi"/>}> </Route>
+      {/* <Route path='/hi-food' element={<NewsContainer  category="food" language="lang=hi"/>}> </Route>
+      <Route path='/hi-environment' element={<NewsContainer  category="environment" language="lang=hi"/>}> </Route>hi- */}
 
     
     </Routes>
