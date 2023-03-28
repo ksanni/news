@@ -140,3 +140,20 @@ font-weight: 700;
 .d-flex{
   height: fit-content;
 }
+
+.btn-Top{
+  float: right;
+  font-size: xx-large;
+  width: 45px;
+  height: 40px;
+  color: white;
+  background-color: #117a2e;
+  border: none;
+}
+.btn-Top:hover{
+  background-color: blueviolet;
+  box-shadow: -28px 6px 61px 12px rgba(0, 0, 0, 0.2);
+  z-index: -1;
+  transition: 0.3s;
+  
+}
